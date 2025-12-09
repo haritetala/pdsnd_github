@@ -2,9 +2,13 @@ import time
 import pandas as pd
 import numpy as np
 
+# Constants for data files and valid user inputs
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
+DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 
 def get_filters():
     """
