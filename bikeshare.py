@@ -16,10 +16,16 @@ import time
 import pandas as pd
 import numpy as np
 
-# Dictionary mapping city names to their corresponding data files
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+# Constants for data files and valid user inputs
+CITY_DATA = {
+    'chicago': 'chicago.csv',
+    'new york city': 'new_york_city.csv',
+    'washington': 'washington.csv'
+}
+
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
+DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+SEPARATOR = '-' * 40  # Reusable separator for output formatting
 
 def get_filters():
     """
@@ -47,7 +53,7 @@ def get_filters():
     # Day filter enables analysis of weekday vs weekend patterns
 
 
-    print('-'*40)
+    print(SEPARATOR)
     return city, month, day
 
 
@@ -94,7 +100,7 @@ def time_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(SEPARATOR)
 
 
 def station_stats(df):
@@ -121,7 +127,7 @@ def station_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(SEPARATOR)
 
 
 def trip_duration_stats(df):
@@ -145,7 +151,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(SEPARATOR)
 
 
 def user_stats(df):
@@ -174,7 +180,7 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print(SEPARATOR)
 
 
 def main():
