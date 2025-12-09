@@ -39,12 +39,50 @@ The bikeshare analysis program allows users to interactively explore bikeshare d
    ```
 4. Follow the interactive prompts to explore the data
 
+## Usage Example
+When you run the program, you'll be prompted to make selections:
+
+```
+Hello! Let's explore some US bikeshare data!
+Which city would you like to explore? (Chicago, New York City, Washington): chicago
+Which month? (all, January, February, March, April, May, June): march
+Which day of the week? (all, Monday, Tuesday, ... Sunday): friday
+```
+
+The program will then display statistics about:
+- Most common travel times (month, day, hour)
+- Most popular stations and trip routes
+- Total and average trip duration
+- User demographics (type, gender, birth year)
+
 ## Features
 - **Interactive filtering** by city, month, and day
 - **Statistical analysis** including most common travel times, stations, and trips
 - **User demographics** analysis (where available)
 - **Raw data display** option to view individual trip records
 - **Restart capability** to perform multiple analyses
+
+## Statistics Computed
+The program analyzes the bikeshare data to provide the following insights:
+
+### Time Statistics
+- Most common month for bike rentals
+- Most common day of the week for bike rentals
+- Most common hour of the day for bike rentals
+
+### Station Statistics
+- Most commonly used start station
+- Most commonly used end station
+- Most frequent trip route (start-end station combination)
+
+### Trip Duration Statistics
+- Total cumulative travel time
+- Average travel time per trip
+
+### User Statistics
+- Count of each user type (Subscriber, Customer)
+- Count of each gender (where available)
+- Birth year statistics: earliest, most recent, and most common (where available)
 
 ## Credits
 - Udacity for providing the project template and course materials
